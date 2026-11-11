@@ -155,6 +155,15 @@
   padding: 16px 20px 18px;
 }
 
+.modal__video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  background: #000;
+}
+
 /* ---------- "How to use" popover (under the header's button) ---------- */
 
 .howto-scrim {

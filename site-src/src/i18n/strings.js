@@ -185,10 +185,12 @@ export const STRINGS = {
       },
       {
         title: '图集',
-        desc: '全天累积红化图、分距离层图、银盘尘埃切片与分子云分布，共 12 张；另有一段穿越尘埃的动画视频。',
+        desc: '全天累积红化图、分距离层图、银盘尘埃切片与分子云分布，共 12 张；另有两个三维交互查看器和可在线预览的尘埃穿越动画。',
         items: [
           { name: '图集 · 12 张图与图注', fmt: 'WEB', open: 'gallery' },
-          { name: '尘埃穿越动画 · 1080p 60 秒', fmt: 'MP4', size: '≈97 MB', download: 'media/dust-flythrough.mp4' },
+          { name: '开放超泡交互式展示', fmt: '3D', href: 'https://nadc.china-vo.org/data/dustmaps/OSBs' },
+          { name: '空泡捕手计划DR1交互式展示', fmt: '3D', href: 'https://nadc.china-vo.org/data/dustmaps/BCP/3d-bubbles-viewer' },
+          { name: '尘埃穿越动画 · 1080p 60 秒', fmt: 'MP4', size: '≈97 MB', open: 'video' },
           { name: 'NADC 资源下载页', fmt: 'WEB', href: NADC_RESOURCES_URL },
         ],
       },
@@ -269,6 +271,8 @@ export const STRINGS = {
     galleryTitle: '图集',
     galleryIntro: '图片与图注来自 [NADC 资源下载页]({url})。此处为压缩预览，点击「下载原图」获取全分辨率 PNG。',
     galleryDownload: '下载原图',
+    videoTitle: '尘埃穿越动画',
+    videoDownload: '下载视频',
     bcpShells: ['近', '中', '远'],
     galleryCaptions: [
       '图1. 我们三维尘埃消光图的整体概览，中央主图额外单独在图2提供展示和下载。',
@@ -464,10 +468,12 @@ export const STRINGS = {
       },
       {
         title: 'Figures',
-        desc: 'All-sky cumulative reddening, distance shells, Galactic-disk dust slices and molecular clouds — 12 figures — plus a fly-through video of the dust.',
+        desc: 'All-sky cumulative reddening, distance shells, Galactic-disk dust slices and molecular clouds — 12 figures — plus two interactive 3D viewers and a dust fly-through video to watch or download.',
         items: [
           { name: 'Gallery · 12 figures with captions', fmt: 'WEB', open: 'gallery' },
-          { name: 'Dust fly-through video · 1080p, 60 s', fmt: 'MP4', size: '≈97 MB', download: 'media/dust-flythrough.mp4' },
+          { name: 'Open Superbubbles · Interactive Viewer', fmt: '3D', href: 'https://nadc.china-vo.org/data/dustmaps/OSBs' },
+          { name: 'Bubble Catcher Project DR1 · Interactive Viewer', fmt: '3D', href: 'https://nadc.china-vo.org/data/dustmaps/BCP/3d-bubbles-viewer' },
+          { name: 'Dust fly-through video · 1080p, 60 s', fmt: 'MP4', size: '≈97 MB', open: 'video' },
           { name: 'NADC resources page', fmt: 'WEB', href: NADC_RESOURCES_URL },
         ],
       },
@@ -548,6 +554,8 @@ export const STRINGS = {
     galleryTitle: 'Figures',
     galleryIntro: 'Figures and captions from the [NADC resources page]({url}). These are compressed previews; “Download original” fetches the full-resolution PNG.',
     galleryDownload: 'Download original',
+    videoTitle: 'Dust fly-through video',
+    videoDownload: 'Download video',
     bcpShells: ['Near', 'Middle', 'Far'],
     galleryCaptions: [
       'Fig. 1. Overview of our 3D dust extinction map; the central main panel is also shown and downloadable on its own as Fig. 2.',

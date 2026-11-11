@@ -12,7 +12,7 @@ const plotStyle = (style) => ({ sigma: '0.1', cmap: 'Spectral_r', ...style });
 const toolbox = () => ({ mode: 'ext', picked: [], ebv: '0.3', teff: '5500', result: null, error: null, busy: false });
 
 const initialState = {
-  modal: null, // 'query' | 'batch' | 'plot' | 'bcp' | 'tools' | 'reddening' | 'docs' | 'gallery' | null
+  modal: null, // 'query' | 'batch' | 'plot' | 'bcp' | 'tools' | 'reddening' | 'docs' | 'gallery' | 'video' | null
   query: {
     frame: 'galactic',
     values: { l: '', b: '', ra: '', dec: '', d: '' },
