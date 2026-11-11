@@ -10,6 +10,7 @@ import UtilitiesTool from './tools/UtilitiesTool.jsx';
 import ReddeningPanel from './tools/ReddeningPanel.jsx';
 import DocsPanel from './tools/DocsPanel.jsx';
 import GalleryPanel from './tools/GalleryPanel.jsx';
+import dustVideoPoster from '../assets/images/dust-flythrough-poster.webp';
 import './ToolModal.css';
 
 const TOOLS = {
@@ -21,8 +22,10 @@ const TOOLS = {
   reddening: ReddeningPanel,
   docs: DocsPanel,
   gallery: GalleryPanel,
+  video: DustVideoPanel,
 };
 const FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+const DUST_VIDEO_URL = `${import.meta.env.BASE_URL}media/dust-flythrough.mp4`;
 
 /** The tool's how-to, shown as a popover under the header's 「使用说明」 button. */
 function HowTo({ doc, id }) {
@@ -52,6 +55,18 @@ function HowTo({ doc, id }) {
         </div>
       )}
     </div>
+  );
+}
+
+function DustVideoPanel() {
+  const { t } = useLang();
+  return (
+    <>
+      <video className="modal__video" src={DUST_VIDEO_URL} poster={dustVideoPoster} controls playsInline preload="none" aria-label={t.videoTitle} tabIndex={0} />
+      <a className="pill-link" href={DUST_VIDEO_URL} download>
+        ↓ {t.videoDownload} · MP4 · ≈97 MB
+      </a>
+    </>
   );
 }
 
@@ -120,6 +135,7 @@ export default function ToolModal() {
     reddening: t.redTitle,
     docs: t.docsTitle,
     gallery: t.galleryTitle,
+    video: t.videoTitle,
   }[modal];
   const doc = docs[modal];
 
